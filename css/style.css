@@ -75,9 +75,9 @@ table {
   color: #3d58a6; }
 
 .container {
-  padding: 10px 90px; }
+  padding: 15px 90px; }
 
-.main-header .container, .video-section .video-body {
+.main-header .container, .video-section .video-body, .news-section .container .news-article-container {
   display: flex;
   justify-content: space-between; }
 
@@ -98,32 +98,27 @@ table {
       .main-header .container .main-navigation .main-menu li a {
         text-decoration: none;
         color: #3D58A6;
-        padding: 10px;
+        padding: 15px;
         font-size: 25px;
         box-sizing: border-box;
         text-transform: uppercase;
         transition: 0.3s; }
-      .main-header .container .main-navigation .main-menu li :hover {
+      .main-header .container .main-navigation .main-menu li:hover {
         opacity: 0.4; }
     .main-header .container .main-navigation .social-icons {
       display: flex;
       font-family: "RobotoRegular", sans-serif; }
-      .main-header .container .main-navigation .social-icons li a {
-        transition: 0.3s; }
-      .main-header .container .main-navigation .social-icons li:after {
-        content: "";
-        display: inline-block;
-        background-color: #3D58A6;
-        width: 2px;
-        height: 30px;
-        margin: 0 15px; }
-      .main-header .container .main-navigation .social-icons li:last-child:after {
-        display: none; }
-      .main-header .container .main-navigation .social-icons li img {
+      .main-header .container .main-navigation .social-icons li {
+        padding: 0 5px;
+        border-right: 2px solid #3D58A6; }
+        .main-header .container .main-navigation .social-icons li:last-child {
+          border-right: 0; }
+      .main-header .container .main-navigation .social-icons img {
         height: 20px;
-        padding: 10px; }
-      .main-header .container .main-navigation .social-icons li :hover {
-        opacity: 0.4; }
+        padding: 10px;
+        transition: 0.3s; }
+        .main-header .container .main-navigation .social-icons img:hover {
+          opacity: 0.6; }
 
 .banner-section {
   background-color: #e6e6e6;
@@ -149,33 +144,66 @@ table {
 
 .video-section {
   padding: 20px 0;
-  background-color: #363E97;
-  color: white;
-  font-family: "RobotoRegular", sans-serif;
-  font-size: 24px; }
+  background-color: #363E97; }
   .video-section .video-section-header {
-    padding-bottom: 20px; }
-    .video-section .video-section-header span :hover {
-      color: #EE4036; }
+    padding-bottom: 30px;
+    color: white;
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 24px; }
     .video-section .video-section-header span a {
       color: white;
       transition: 0.3s; }
+      .video-section .video-section-header span a:hover {
+        color: #EE4036; }
   .video-section .video-body .video-item {
     -webkit-box-shadow: 1px 1px 2px #000;
     -moz-box-shadow: 1px 1px 2px #000;
     -o-box-shadow: 1px 1px 2px #000;
     box-shadow: 1px 1px 2px #000;
-    width: 48.5%;
+    width: 49%;
     height: 400px;
     background-color: #F2F2F2;
     display: flex;
+    border: 3px solid transparent;
     align-items: center;
-    border: 1px solid transparent;
     box-sizing: border-box; }
     .video-section .video-body .video-item:hover {
-      border: 2px solid #EE4036; }
+      border: 3px solid #EE4036; }
     .video-section .video-body .video-item h2 {
+      font-family: "RobotoRegular", sans-serif;
       color: black;
       text-transform: uppercase;
       font-size: 16.85px;
       margin-left: 20%; }
+
+.news-section {
+  padding: 20px 0;
+  background-color: #BDCCD4; }
+  .news-section .container .news-section-header {
+    padding-bottom: 30px;
+    color: #3D58A6;
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 24px; }
+    .news-section .container .news-section-header span a {
+      color: #3D58A6;
+      transition: 0.3s; }
+      .news-section .container .news-section-header span a:hover {
+        color: #EE4036; }
+  .news-section .container .news-article-container .news-article {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5%; }
+    .news-section .container .news-article-container .news-article .more {
+      width: 100%;
+      padding: 10px 0;
+      background-color: #E6E6E6;
+      position: absolute;
+      bottom: 0;
+      font-family: "RobotoRegular", sans-serif; }
+      .news-section .container .news-article-container .news-article .more h2 {
+        text-transform: uppercase;
+        padding-left: 10px;
+        margin: 10px 0; }
+      .news-section .container .news-article-container .news-article .more:hover {
+        bottom: 0%;
+        height: 70%; }

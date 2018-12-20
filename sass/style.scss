@@ -28,13 +28,13 @@
 					a{
 						text-decoration: none;
 						color: $blue;
-						padding: 10px;
+						padding: 15px;
 						font-size: 25px;
 						box-sizing: border-box;
 						text-transform: uppercase;
 						transition: 0.3s;
 					}	
-					:hover{
+					&:hover{
 						opacity: 0.4 ;
 					}
 
@@ -44,29 +44,24 @@
 				display: flex;
 				font-family: $roboto;
 				li{
-					a{
-						transition: 0.3s;
-					}
-					&:after{
-						@include after-lines(inline-block, $blue);
-					}
+					padding:0 5px;
+					border-right:2px solid $blue;
 					&:last-child{
-						&:after{
-							display: none;
+							border-right: 0;
 						}
 					}
 					img{
 						height: 20px;
 						padding: 10px;
-					}
-					:hover{
-						opacity: 0.4;
+						transition: 0.3s;
+						&:hover{
+							opacity: 0.6;
+						}
 					}
 				}
 			}
 		}
 	}
-}
 .banner-section{
 	background-color: $banner-section-color;
 	padding: $section-padding 0;
@@ -98,24 +93,24 @@
 .video-section{
 	padding: $section-padding 0;
 	background-color:#363E97;
-	color:white;
-	font-family: $roboto;
-	font-size:24px;
+	
 	.video-section-header{
-		padding-bottom: 20px;
+		padding-bottom: 30px;
+		color:white;
+		font-family: $roboto;
+		font-size:24px;
 		
 		span{
-			:hover{
-				color: $red;
-			}
 			a{
 				color:white;
 				transition:0.3s;
+				&:hover{
+					color: $red;
+				}
 			}
 		}	
 	}
 	.video-body{
-		
 		@extend %flex-placeholder;
 		.video-item{
 			@include box-shadow;
@@ -123,13 +118,14 @@
 			height: 400px;
 			background-color:#F2F2F2;
 			display: flex;
+			border: 3px solid transparent;
 			align-items: center;
-			border: 1px solid transparent;
 			box-sizing:border-box;
 			&:hover{
-			border: 2px solid $red;
+			border: 3px solid $red;
 			}
 			h2{
+				font-family: $roboto;
 				color: black;
 				text-transform: uppercase;
 				font-size:16.85px;
@@ -138,5 +134,54 @@
 		}
 	}
 }
-
+// news
+.news-section{
+	padding: $section-padding 0;
+	background-color:$lightblue;
+		.container{
+			.news-section-header{
+				padding-bottom: 30px;
+				color:$blue;
+				font-family: $roboto;
+				font-size:24px;
+				
+				span{
+					a{
+						color:$blue;
+						transition:0.3s;
+						&:hover{
+							color: $red;
+						}
+					}
+				}	
+			}	
+			.news-article-container{
+				@extend %flex-placeholder;
+				.news-article{
+					position: relative;
+					display: inline-block;
+					margin-bottom:5%;
+					
+					.more{
+						
+						width: 100%;
+						padding: 10px 0;
+						background-color: $grey;
+						position: absolute;
+						bottom: 0;
+						font-family:$roboto;
+						h2{
+							text-transform: uppercase;
+							padding-left: 10px;
+							margin:10px 0;
+						}
+						&:hover{
+							bottom: 0%;
+							height: 70%;
+						}
+					}	
+				}
+			}
+		}
+	}
 
