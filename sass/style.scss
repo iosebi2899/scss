@@ -148,7 +148,7 @@
 				span{
 					a{
 						color:$blue;
-						@include transition;
+						transition:position 3s;
 						&:hover{
 							color: $red;
 						}
@@ -161,15 +161,16 @@
 					position: relative;
 					display: inline-block;
 					margin-bottom: 5%;
-					@include transition;
+					transition:position 3s;
 					
 					.more{
-						@include transition;
+						transition:position 3s;
 						width: 100%;
 						padding: 10px 0;
 						background-color: $grey;
 						position: absolute;
 						bottom: -20%;
+						height: 20%;
 						font-family:$roboto;
 						h2{
 							text-transform: uppercase;
@@ -177,7 +178,7 @@
 							margin:10px 0;
 						}
 						&:hover{
-							@include transition;
+							transition:position 3s;
 							bottom: -20%;
 							height: 70%;
 						}
@@ -186,4 +187,40 @@
 			}
 		}
 	}
+.featured-section{
+	padding: $section-padding 0;
+	background-color:$grey;
 
+	.featured-section-header{
+		
+		padding-bottom: 30px;
+		color:black;
+		font-family: $roboto;
+		font-size:24px;
+		
+		span{
+			a{
+				color:black;
+				@include transition;
+				&:hover{
+					color: $red;
+				}
+			}
+		}	
+	}
+	.article-container{
+		display: flex;
+
+		.featured-media{
+			width: $video-width;
+			background-color: #F2F2F2;
+			padding: 20px;
+
+			h2{
+				color: $blue;
+				font-family: $roboto;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

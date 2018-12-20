@@ -192,35 +192,54 @@ table {
     font-size: 24px; }
     .news-section .container .news-section-header span a {
       color: #3D58A6;
-      -webkit-transition: 0.3s;
-      -moz-transition: 0.3s;
-      -o-transition: 0.3s; }
+      transition: position 3s; }
       .news-section .container .news-section-header span a:hover {
         color: #EE4036; }
   .news-section .container .news-article-container .news-article {
     position: relative;
     display: inline-block;
     margin-bottom: 5%;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s; }
+    transition: position 3s; }
     .news-section .container .news-article-container .news-article .more {
-      -webkit-transition: 0.3s;
-      -moz-transition: 0.3s;
-      -o-transition: 0.3s;
+      transition: position 3s;
       width: 100%;
       padding: 10px 0;
       background-color: #E6E6E6;
       position: absolute;
       bottom: -20%;
+      height: 20%;
       font-family: "RobotoRegular", sans-serif; }
       .news-section .container .news-article-container .news-article .more h2 {
         text-transform: uppercase;
         padding-left: 10px;
         margin: 10px 0; }
       .news-section .container .news-article-container .news-article .more:hover {
-        -webkit-transition: 0.3s;
-        -moz-transition: 0.3s;
-        -o-transition: 0.3s;
+        transition: position 3s;
         bottom: -20%;
         height: 70%; }
+
+.featured-section {
+  padding: 20px 0;
+  background-color: #E6E6E6; }
+  .featured-section .featured-section-header {
+    padding-bottom: 30px;
+    color: black;
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 24px; }
+    .featured-section .featured-section-header span a {
+      color: black;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s; }
+      .featured-section .featured-section-header span a:hover {
+        color: #EE4036; }
+  .featured-section .article-container {
+    display: flex; }
+    .featured-section .article-container .featured-media {
+      width: 49%;
+      background-color: #F2F2F2;
+      padding: 20px; }
+      .featured-section .article-container .featured-media h2 {
+        color: #3D58A6;
+        font-family: "RobotoRegular", sans-serif;
+        text-transform: uppercase; }
