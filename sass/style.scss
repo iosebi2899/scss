@@ -1,0 +1,141 @@
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'fonts.scss';
+@import '_partials';
+@import '_mixin';
+
+.main-header{
+	width:100%;
+	background-color: white;
+	.container{
+		@extend %flex-placeholder;
+		.main-logo-container{
+			img{
+				width:200px;
+			}
+		}
+		.main-navigation{
+			color: red;
+			justify-content: space-between;
+			align-items: center;
+			display: flex;
+
+			.main-menu{
+				display: flex;
+				align-items: center;
+				font-family: $roboto;
+				li{
+					a{
+						text-decoration: none;
+						color: $blue;
+						padding: 10px;
+						font-size: 25px;
+						box-sizing: border-box;
+						text-transform: uppercase;
+						transition: 0.3s;
+					}	
+					:hover{
+						opacity: 0.4 ;
+					}
+
+				}
+			}
+			.social-icons{
+				display: flex;
+				font-family: $roboto;
+				li{
+					a{
+						transition: 0.3s;
+					}
+					&:after{
+						@include after-lines(inline-block, $blue);
+					}
+					&:last-child{
+						&:after{
+							display: none;
+						}
+					}
+					img{
+						height: 20px;
+						padding: 10px;
+					}
+					:hover{
+						opacity: 0.4;
+					}
+				}
+			}
+		}
+	}
+}
+.banner-section{
+	background-color: $banner-section-color;
+	padding: $section-padding 0;
+	width: 100%;
+
+	.image-container{
+		position: relative;
+
+		:first-child{
+			width: 100%;
+		}
+		h2{
+			color: white;
+			position: absolute;
+			bottom:8%;
+			left: 3%;
+			font-family: $roboto;
+			text-transform: uppercase;
+			font-size: 30px;
+		}
+		:last-child {
+			position: absolute;
+			width: 100px;
+			bottom:10%;
+			right: 5%;
+		}
+	}
+}
+.video-section{
+	padding: $section-padding 0;
+	background-color:#363E97;
+	color:white;
+	font-family: $roboto;
+	font-size:24px;
+	.video-section-header{
+		padding-bottom: 20px;
+		
+		span{
+			:hover{
+				color: $red;
+			}
+			a{
+				color:white;
+				transition:0.3s;
+			}
+		}	
+	}
+	.video-body{
+		border: 1px solid transparent;
+		box-sizing:border-box;
+		:hover{
+			border: 1px solid $red;
+		}
+		@extend %flex-placeholder;
+		.video-item{
+			@include box-shadow;
+			width: $video-width;
+			height: 400px;
+			background-color:#F2F2F2;
+			display: flex;
+			align-items: center;
+			h2{
+				color: black;
+				text-transform: uppercase;
+				font-size:16.85px;
+				margin-left: 20%;
+			}
+		}
+	}
+}
+
+

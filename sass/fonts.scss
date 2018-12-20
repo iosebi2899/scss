@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../fonts/RobotoRegular.eot') format('embedded-opentype'),
+         url('../fonts/RobotoRegular.woff2') format('woff2'),
+         url('../fonts/RobotoRegular.woff') format('woff'),
+         url('../fonts/RobotoRegular.ttf') format('truetype'),
+         url('../fonts/RobotoRegular.svg#RobotoRegular') format('svg');
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?isxyo1');
+  src:  url('../fonts/icomoon.eot?isxyo1#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?isxyo1') format('truetype'),
+    url('../fonts/icomoon.woff?isxyo1') format('woff'),
+    url('../fonts/icomoon.svg?isxyo1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-s:before {
+  content: "\e900";
+  color: #ee4036;
+}
+.icon-f:before {
+  content: "\e901";
+  color: #3d58a6;
+}
+.icon-g:before {
+  content: "\e902";
+  color: #3d58a6;
+}
+.icon-y:before {
+  content: "\e903";
+  color: #3d58a6;
+}
