@@ -102,7 +102,9 @@ table {
         font-size: 25px;
         box-sizing: border-box;
         text-transform: uppercase;
-        transition: 0.3s; }
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s; }
       .main-header .container .main-navigation .main-menu li:hover {
         opacity: 0.4; }
     .main-header .container .main-navigation .social-icons {
@@ -116,7 +118,9 @@ table {
       .main-header .container .main-navigation .social-icons img {
         height: 20px;
         padding: 10px;
-        transition: 0.3s; }
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s; }
         .main-header .container .main-navigation .social-icons img:hover {
           opacity: 0.6; }
 
@@ -152,7 +156,9 @@ table {
     font-size: 24px; }
     .video-section .video-section-header span a {
       color: white;
-      transition: 0.3s; }
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s; }
       .video-section .video-section-header span a:hover {
         color: #EE4036; }
   .video-section .video-body .video-item {
@@ -186,24 +192,35 @@ table {
     font-size: 24px; }
     .news-section .container .news-section-header span a {
       color: #3D58A6;
-      transition: 0.3s; }
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s; }
       .news-section .container .news-section-header span a:hover {
         color: #EE4036; }
   .news-section .container .news-article-container .news-article {
     position: relative;
     display: inline-block;
-    margin-bottom: 5%; }
+    margin-bottom: 5%;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s; }
     .news-section .container .news-article-container .news-article .more {
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s;
       width: 100%;
       padding: 10px 0;
       background-color: #E6E6E6;
       position: absolute;
-      bottom: 0;
+      bottom: -20%;
       font-family: "RobotoRegular", sans-serif; }
       .news-section .container .news-article-container .news-article .more h2 {
         text-transform: uppercase;
         padding-left: 10px;
         margin: 10px 0; }
       .news-section .container .news-article-container .news-article .more:hover {
-        bottom: 0%;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        bottom: -20%;
         height: 70%; }

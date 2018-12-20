@@ -16,3 +16,8 @@
     display: flex;
     justify-content: space-between;
 }
+@mixin transition{
+    -webkit-transition:0.3s;
+    -moz-transition:0.3s;
+    -o-transition:0.3s;
+}

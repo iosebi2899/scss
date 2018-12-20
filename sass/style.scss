@@ -32,7 +32,7 @@
 						font-size: 25px;
 						box-sizing: border-box;
 						text-transform: uppercase;
-						transition: 0.3s;
+						@include transition;
 					}	
 					&:hover{
 						opacity: 0.4 ;
@@ -53,7 +53,7 @@
 					img{
 						height: 20px;
 						padding: 10px;
-						transition: 0.3s;
+						@include transition;
 						&:hover{
 							opacity: 0.6;
 						}
@@ -103,7 +103,7 @@
 		span{
 			a{
 				color:white;
-				transition:0.3s;
+				@include transition;
 				&:hover{
 					color: $red;
 				}
@@ -148,7 +148,7 @@
 				span{
 					a{
 						color:$blue;
-						transition:0.3s;
+						@include transition;
 						&:hover{
 							color: $red;
 						}
@@ -160,15 +160,16 @@
 				.news-article{
 					position: relative;
 					display: inline-block;
-					margin-bottom:5%;
+					margin-bottom: 5%;
+					@include transition;
 					
 					.more{
-						
+						@include transition;
 						width: 100%;
 						padding: 10px 0;
 						background-color: $grey;
 						position: absolute;
-						bottom: 0;
+						bottom: -20%;
 						font-family:$roboto;
 						h2{
 							text-transform: uppercase;
@@ -176,7 +177,8 @@
 							margin:10px 0;
 						}
 						&:hover{
-							bottom: 0%;
+							@include transition;
+							bottom: -20%;
 							height: 70%;
 						}
 					}	
