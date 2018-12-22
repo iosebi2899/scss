@@ -82,11 +82,54 @@
 			text-transform: uppercase;
 			font-size: 30px;
 		}
-		:last-child {
+		.mini-logo {
 			position: absolute;
 			width: 100px;
 			bottom:10%;
 			right: 5%;
+		}
+
+		.left{
+			position: absolute;
+			top: 48%;
+			left: 2%;
+
+			a{
+				img{
+					width: 70px;
+					opacity: 0;
+					@include transition;
+				}
+			}
+		}
+		.right{
+			position: absolute;
+			top: 48%;
+			right:2%;
+
+			a{
+				img{
+					width: 70px;
+					opacity: 0;
+					@include transition;
+				}
+			}
+		}
+		&:hover{
+			.right{
+				a{
+					img{
+						opacity: 1;
+					}
+				}
+			}
+			.left{
+				a{
+					img{
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 }
@@ -114,6 +157,7 @@
 		@extend %flex-placeholder;
 		.video-item{
 			@include box-shadow;
+			@include transition;
 			width: $video-width;
 			height: 400px;
 			background-color:#F2F2F2;
@@ -148,7 +192,7 @@
 				span{
 					a{
 						color:$blue;
-						transition:position 3s;
+						@include transition;
 						&:hover{
 							color: $red;
 						}
@@ -161,26 +205,41 @@
 					position: relative;
 					display: inline-block;
 					margin-bottom: 5%;
-					transition:position 3s;
 					
 					.more{
-						transition:position 3s;
+						color: black;
 						width: 100%;
 						padding: 10px 0;
 						background-color: $grey;
 						position: absolute;
 						bottom: -20%;
-						height: 20%;
+						height: 15%;
 						font-family:$roboto;
+						transition:height 0.3s;
 						h2{
 							text-transform: uppercase;
 							padding-left: 10px;
 							margin:10px 0;
 						}
+						.read-more{
+							position:absolute;
+							right: 5%;
+							bottom: 10%;
+							font-size: 12px;
+							opacity: 0;
+							@include transition;
+							a{
+								color: $blue;
+							}
+						}
 						&:hover{
-							transition:position 3s;
 							bottom: -20%;
 							height: 70%;
+							color: $blue;
+							
+							.read-more{
+								opacity: 1;
+							}
 						}
 					}	
 				}
@@ -210,17 +269,74 @@
 	}
 	.article-container{
 		display: flex;
-
+		.left{
+			margin-right: 5%;
+		}
 		.featured-media{
 			width: $video-width;
 			background-color: #F2F2F2;
 			padding: 20px;
-
-			h2{
+			border: 2px solid transparent;
+			box-sizing: border-box;
+			@include transition;
+			position: relative;
+		
+		
+			.media-header{
 				color: $blue;
 				font-family: $roboto;
 				text-transform: uppercase;
+				font-size: 26px;
+
+			}	
+			.read-more{
+				position: absolute;
+				bottom:5%;
+				right: 5%;
+
+				a{
+					color: $blue;
+					font-family: $roboto;
+					font-size: 16px;
+				}
+			}
+			&:hover{
+					border: 2px solid $red;
+					
+				.media-header{
+					color: $red;
+				}
+				.read-more{
+					a{
+						color: $red;
+					}
+				}
+			}	
+			.media-info{
+				@extend %flex-placeholder;
+				align-items: center;
+
+				img{
+					height: 250px;
+				}
+				.text{
+				color:	$text-grey;
+				font-family:$roboto;
+				font-size: 25px;
+				margin-left: 30px;
+				}
 			}
 		}
+	}
+}
+footer{
+	width: 100%;
+	
+	.footer-container{
+		display: flex;
+		justify-content: space-between;
+		padding: 2% 8%;
+		font-family: $roboto;
+		font-weight: bold;
 	}
 }
