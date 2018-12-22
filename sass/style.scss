@@ -20,6 +20,7 @@
 			align-items: center;
 			display: flex;
 
+
 			.main-menu{
 				display: flex;
 				align-items: center;
@@ -37,7 +38,9 @@
 					&:hover{
 						opacity: 0.4 ;
 					}
-
+					@media screen and (max-width: $large){
+						display: none;
+					}
 				}
 			}
 			.social-icons{
@@ -46,7 +49,7 @@
 				li{
 					padding:0 5px;
 					border-right:2px solid $blue;
-					&:last-child{
+					&:nth-child(4){
 							border-right: 0;
 						}
 					}
@@ -56,6 +59,22 @@
 						@include transition;
 						&:hover{
 							opacity: 0.6;
+						}
+					}
+					a{
+						.burger{
+							display: none;
+							@media screen and (max-width: $large){
+								display: inline-block;
+								margin: 5px;
+							}
+							span{
+							height: 3px;
+							width: 10px;
+							margin:5px;
+							display: block;
+							background-color: blue;
+							}
 						}
 					}
 				}
@@ -136,6 +155,9 @@
 .video-section{
 	padding: $section-padding 0;
 	background-color:#363E97;
+	@media screen and (max-width: $large){
+		display: none;
+	}
 	
 	.video-section-header{
 		padding-bottom: 30px;
@@ -205,10 +227,22 @@
 					position: relative;
 					display: inline-block;
 					margin-bottom: 5%;
+					&:last-child{
+						margin-right: 0;
+						@media screen and (max-width: $large){
+							display: none;
+						}
+					}
+					.img{
+						margin-right: 5%;
+						img{
+							width: 100%;
+						}
+					}
 					
 					.more{
 						color: black;
-						width: 100%;
+						width: 95%;
 						padding: 10px 0;
 						background-color: $grey;
 						position: absolute;
@@ -269,6 +303,10 @@
 	}
 	.article-container{
 		display: flex;
+		width: 100%;
+		@media screen and (max-width: $large){
+			display: block;
+		}
 		.left{
 			margin-right: 5%;
 		}
@@ -280,8 +318,12 @@
 			box-sizing: border-box;
 			@include transition;
 			position: relative;
-		
-		
+			@media screen and (max-width: $large){
+				width: 100%;
+				margin-bottom: 5%;
+			}
+			
+			
 			.media-header{
 				color: $blue;
 				font-family: $roboto;
