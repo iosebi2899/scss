@@ -51,32 +51,38 @@
 					border-right:2px solid $blue;
 					&:nth-child(4){
 							border-right: 0;
-						}
-					}
-					img{
-						height: 20px;
-						padding: 10px;
-						@include transition;
-						&:hover{
-							opacity: 0.6;
-						}
-					}
-					a{
-						.burger{
-							display: none;
-							@media screen and (max-width: $large){
+							@media screen and (max-width: $small){
 								display: inline-block;
-								margin: 5px;
-							}
-							span{
-							height: 3px;
-							width: 10px;
-							margin:5px;
-							display: block;
-							background-color:$blue;
 							}
 						}
+						@media screen and (max-width: $small){
+							display: none;
+						}
 					}
+				img{
+					height: 20px;
+					padding: 10px;
+					@include transition;
+					&:hover{
+						opacity: 0.6;
+					}
+				}
+				a{
+					.burger{
+						display: none;
+						@media screen and (max-width: $large){
+							display: inline-block;
+							margin: 5px;
+						}
+						span{
+						height: 3px;
+						width: 10px;
+						margin:5px;
+						display: block;
+						background-color:$blue;
+						}
+					}
+				}
 				}
 			}
 		}
@@ -223,10 +229,17 @@
 			}	
 			.news-article-container{
 				@extend %flex-placeholder;
+				@media screen and (max-width: $small){
+					display: inline-block;
+				}
 				.news-article{
 					position: relative;
 					display: inline-block;
 					margin-bottom: 5%;
+					@media screen and (max-width: $small){
+						width: 100%;
+						margin-bottom: 20%;
+					}
 					&:last-child{
 						margin-right: 0;
 						@media screen and (max-width: $large){
@@ -237,6 +250,9 @@
 						margin-right: 5%;
 						img{
 							width: 100%;
+							@media screen and (max-width: $small){
+								margin-bottom: -2%;
+							}
 						}
 					}
 					
@@ -254,6 +270,9 @@
 							text-transform: uppercase;
 							padding-left: 10px;
 							margin:10px 0;
+							@media screen and (max-width: $small){
+								font-size:30px;
+							}
 						}
 						.read-more{
 							position:absolute;
@@ -321,6 +340,12 @@
 			@media screen and (max-width: $large){
 				width: 100%;
 				margin-bottom: 5%;
+				
+				h3{
+					@media screen and (max-width: $small){
+						padding-bottom: 5%;
+					}
+				}
 			}
 			
 			
@@ -329,6 +354,9 @@
 				font-family: $roboto;
 				text-transform: uppercase;
 				font-size: 26px;
+				@media screen and (max-width: $small){
+					margin: 0 5%;
+				}
 
 			}	
 			.read-more{
@@ -357,9 +385,15 @@
 			.media-info{
 				@extend %flex-placeholder;
 				align-items: center;
-
+				@media screen and (max-width: $small){
+					display: inline-block;
+				}
 				img{
 					height: 250px;
+					@media screen and (max-width: $small){
+						width: 30%;
+						margin: 10px 10%;
+					}
 				}
 				.text{
 				color:	$text-grey;
@@ -380,5 +414,14 @@ footer{
 		padding: 2% 8%;
 		font-family: $roboto;
 		font-weight: bold;
+		@media screen and (max-width: $small){
+			display: block;
+			text-align: center;
+		}
+		h2{
+			@media screen and (max-width: $small){
+				padding: 20px
+			}
+		}
 	}
 }

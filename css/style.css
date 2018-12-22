@@ -119,6 +119,12 @@ table {
         border-right: 2px solid #3D58A6; }
         .main-header .container .main-navigation .social-icons li:nth-child(4) {
           border-right: 0; }
+          @media screen and (max-width: 768px) {
+            .main-header .container .main-navigation .social-icons li:nth-child(4) {
+              display: inline-block; } }
+        @media screen and (max-width: 768px) {
+          .main-header .container .main-navigation .social-icons li {
+            display: none; } }
       .main-header .container .main-navigation .social-icons img {
         height: 20px;
         padding: 10px;
@@ -249,10 +255,17 @@ table {
       transition: 0.3s; }
       .news-section .container .news-section-header span a:hover {
         color: #EE4036; }
+  @media screen and (max-width: 768px) {
+    .news-section .container .news-article-container {
+      display: inline-block; } }
   .news-section .container .news-article-container .news-article {
     position: relative;
     display: inline-block;
     margin-bottom: 5%; }
+    @media screen and (max-width: 768px) {
+      .news-section .container .news-article-container .news-article {
+        width: 100%;
+        margin-bottom: 20%; } }
     .news-section .container .news-article-container .news-article:last-child {
       margin-right: 0; }
       @media screen and (max-width: 1024px) {
@@ -262,6 +275,9 @@ table {
       margin-right: 5%; }
       .news-section .container .news-article-container .news-article .img img {
         width: 100%; }
+        @media screen and (max-width: 768px) {
+          .news-section .container .news-article-container .news-article .img img {
+            margin-bottom: -2%; } }
     .news-section .container .news-article-container .news-article .more {
       color: black;
       width: 95%;
@@ -276,6 +292,9 @@ table {
         text-transform: uppercase;
         padding-left: 10px;
         margin: 10px 0; }
+        @media screen and (max-width: 768px) {
+          .news-section .container .news-article-container .news-article .more h2 {
+            font-size: 30px; } }
       .news-section .container .news-article-container .news-article .more .read-more {
         position: absolute;
         right: 5%;
@@ -334,11 +353,17 @@ table {
         .featured-section .article-container .featured-media {
           width: 100%;
           margin-bottom: 5%; } }
+  @media screen and (max-width: 1024px) and (max-width: 768px) {
+    .featured-section .article-container .featured-media h3 {
+      padding-bottom: 5%; } }
       .featured-section .article-container .featured-media .media-header {
         color: #3D58A6;
         font-family: "RobotoRegular", sans-serif;
         text-transform: uppercase;
         font-size: 26px; }
+        @media screen and (max-width: 768px) {
+          .featured-section .article-container .featured-media .media-header {
+            margin: 0 5%; } }
       .featured-section .article-container .featured-media .read-more {
         position: absolute;
         bottom: 5%;
@@ -355,8 +380,15 @@ table {
           color: #EE4036; }
       .featured-section .article-container .featured-media .media-info {
         align-items: center; }
+        @media screen and (max-width: 768px) {
+          .featured-section .article-container .featured-media .media-info {
+            display: inline-block; } }
         .featured-section .article-container .featured-media .media-info img {
           height: 250px; }
+          @media screen and (max-width: 768px) {
+            .featured-section .article-container .featured-media .media-info img {
+              width: 30%;
+              margin: 10px 10%; } }
         .featured-section .article-container .featured-media .media-info .text {
           color: #58595B;
           font-family: "RobotoRegular", sans-serif;
@@ -371,3 +403,10 @@ footer {
     padding: 2% 8%;
     font-family: "RobotoRegular", sans-serif;
     font-weight: bold; }
+    @media screen and (max-width: 768px) {
+      footer .footer-container {
+        display: block;
+        text-align: center; } }
+    @media screen and (max-width: 768px) {
+      footer .footer-container h2 {
+        padding: 20px; } }
