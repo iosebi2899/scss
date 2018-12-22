@@ -94,7 +94,18 @@
 
 	.image-container{
 		position: relative;
-
+		
+		.mini-banner{
+			display: none;
+		}
+		@media screen and (max-width: $small){
+			.mini-banner{
+				display: inline;
+			}
+			.banner{
+				display: none;
+			}
+		}
 		:first-child{
 			width: 100%;
 		}

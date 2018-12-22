@@ -153,6 +153,13 @@ table {
   width: 100%; }
   .banner-section .image-container {
     position: relative; }
+    .banner-section .image-container .mini-banner {
+      display: none; }
+    @media screen and (max-width: 768px) {
+      .banner-section .image-container .mini-banner {
+        display: inline; }
+      .banner-section .image-container .banner {
+        display: none; } }
     .banner-section .image-container :first-child {
       width: 100%; }
     .banner-section .image-container h2 {
